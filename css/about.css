@@ -1,0 +1,24 @@
+#about-container {
+  background-color: #191A18;
+  font-family: "OCR A Extended";
+}
+
+.title {
+  text-align: center;
+  color: #65B32E;
+  font-size:xx-large;
+}
+.main-text {
+  text-align: justify;
+  color: #65B32E;
+  line-height: 300%;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.main-text > p {
+  font-size: 1rem;
+}
+.highlight {
+  color: white;
+}
