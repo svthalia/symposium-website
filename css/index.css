@@ -2,6 +2,12 @@
 /* General attributes*/
 /*********************/
 
+/* Font Setup */
+@font-face {
+  font-family: "OCR A Extended";
+  src: url(../resources/OCRAEXT.TTF);
+}
+
 /* 
  * Structuring the general layout of the page. 
  * Also setting some overall style rules such as
@@ -32,9 +38,9 @@ body {
 p {
   margin: 0;
 
-  font-family: "OCR A Std";
+  font-family: "OCR A Extended";
   color: #65B32E;
-  font-size: 12px;
+  font-size: 0.75rem;
 }
 
 button {
@@ -285,7 +291,7 @@ img {
 
   background-color: transparent;
   color: #264413;
-  font-family: "OCR A Std";
+  font-family: "OCR A Extended";
   font-size: 18px;
 
   transition: ease-in 230ms;
@@ -361,6 +367,6 @@ img {
   justify-content: center;
 }
 
-#on-load-center-box p {
-  font-size: 20px;
+#on-load-center-box p{
+  font-size: 1.25rem;
 }
