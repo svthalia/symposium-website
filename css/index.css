@@ -1,0 +1,366 @@
+/*********************/
+/* General attributes*/
+/*********************/
+
+/* 
+ * Structuring the general layout of the page. 
+ * Also setting some overall style rules such as
+ * the fonts or margins
+ */
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+  border-color: #e5e7eb;
+}
+
+::before,
+::after {
+  --tw-content: '';
+}
+
+body {
+  margin: 0;
+
+  background-color: #191A18;
+  overflow: hidden;
+}
+
+p {
+  margin: 0;
+
+  font-family: "OCR A Std";
+  color: #65B32E;
+  font-size: 12px;
+}
+
+button {
+  font-family: inherit;
+
+  font-size: 100%;
+  color: inherit;
+
+  margin: 0;
+  padding: 0;
+
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  vertical-align: middle;
+}
+
+/*************/
+/* Main divs */
+/*************/
+
+/* Creating and setting the size of the main
+  * divs of the page. Most of them are defined
+  * statically, so it might be a good idea to
+  * look at the design and maybe implemet something
+  * for mobile if time allows.
+  */
+
+#main-container {
+  height: 1080px;
+  width: 1920px;
+}
+
+#top-bar {
+  z-index: 2;
+
+  width: 100%;
+  height: 45px;
+
+  background-color: #2E2F2D;
+}
+
+#shell {
+  display: inline-block;
+  height: 880px;
+  width: 520px;
+
+  padding: 15px;
+
+  border-right: 1px solid #2E2F2D;
+}
+
+#inner-page {
+  display: inline-block;
+  position: absolute;
+
+  top: 45px;
+  left: 520px;
+
+  height: 880px;
+  width: 1400px;
+}
+
+/****************/
+/* Top bar divs */
+/****************/
+
+/* Main styling for the bard that spans
+  * the entirity of the webpage.
+  */
+
+.min-tab {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 160px;
+  height: 100%;
+
+  background-color: #20201D;
+}
+
+.min-tab p {
+  font-size: 15px;
+  margin-right: 20px;
+}
+
+#shell-tab {
+  margin-left: 20px;
+}
+
+#new-tab {
+  visibility: hidden;
+}
+
+/*
+  * Building a cross.
+  */
+
+.cross-stand-alone {
+  position: relative;
+
+  width: 20px;
+  height: 20px;
+
+  margin-top: 0px;
+  margin-right: 10px;
+  padding: 0;
+  border: 0;
+
+  background: none;
+}
+
+.cross-stand-alone:before,
+.cross-stand-alone:after {
+  position: absolute;
+  top: 7px;
+  left: 0;
+  right: 0;
+
+  height: 4px;
+
+  content: "";
+
+  background: #2E2F2D;
+  border-radius: 4px;
+}
+
+.cross-stand-alone:before {
+  transform: rotate(45deg);
+}
+
+.cross-stand-alone:after {
+  transform: rotate(-45deg);
+}
+
+.cross-stand-alone span {
+  display: block;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+
+  height: 1px !important;
+  width: 1px !important;
+
+  border: 0 !important;
+
+  overflow: hidden;
+}
+
+/**************/
+/* Shell divs */
+/**************/
+
+/* The definitions are arrange from top-to-button relative
+  * to how the html elements have been defined.
+  */
+
+.shell-box {
+  margin-top: 20px;
+
+  border-bottom: 1px solid #2E2F2D;
+}
+
+/**********/
+/* -Logo- */
+/**********/
+
+#logo-box {
+  display: block;
+
+  height: 140px;
+  width: 100%;
+
+  margin-top: 1.2%;
+}
+
+#logo-box img {
+  width: 95%;
+
+  margin: auto;
+}
+
+/***************/
+/* -Copyright- */
+/***************/
+
+#copyright-box {
+  height: 88px;
+  width: 100%;
+}
+
+/******************/
+/* -Command line- */
+/******************/
+
+#command-line-box {
+  height: 88px;
+  width: 100%;
+}
+
+#highlighter {
+  visibility: visible;
+}
+
+.command-input {
+  visibility: hidden;
+}
+
+.command-input:nth-child(1) {
+  visibility: visible;
+}
+
+/*************/
+/* -Buttons- */
+/*************/
+
+#menu-box {
+  height: 380px;
+  width: 100%;
+
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#button-box {
+  height: 100%;
+  width: 60%;
+
+  background-color: #1C1C1C;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.shell-button {
+  height: 25%;
+  width: 100%;
+
+  background-color: transparent;
+  color: #264413;
+  font-family: "OCR A Std";
+  font-size: 18px;
+
+  transition: ease-in 230ms;
+}
+
+/***************/
+/* -Selection- */
+/***************/
+
+.shell-button:hover {
+  font-size: 23px;
+  color: #65B32E;
+  background-color: #191A18;
+}
+
+/**********/
+/* -Info- */
+/**********/
+
+#info-box {
+  height: 88px;
+  width: 100%;
+
+  border-bottom: none;
+}
+
+/*
+  * Silly but it works.
+  * I don't think anyone will complain.
+  */
+
+#start-info {
+  margin-top: 25px;
+}
+
+/*******************/
+/* Inner page divs */
+/*******************/
+
+/*
+  * This section is divided into two, mainly the divisions that 
+  * are used for the loading animation and the actual section
+  * that is supposed to host the chosen page.
+  */
+
+/* Loading Box */
+
+#on-load-top-box {
+  height: 140px;
+  width: 100%;
+
+  padding: 30px;
+}
+
+.loading-output {
+  visibility: hidden;
+}
+
+.loading-output:nth-child(1) {
+  visibility: visible;
+}
+
+
+/* Inner Page */
+
+#on-load-center-box {
+  height: 740px;
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+#on-load-center-box p {
+  font-size: 20px;
+}
