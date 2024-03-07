@@ -18,8 +18,8 @@ const highlighter = "_";
 const pageNames = [
     "index.html",
     "speakers.html",
+    "sponsors.html",
     "schedule.html",
-    "about.html",
 ];
 
 const fileName = location.href.split("/").slice(-1);
