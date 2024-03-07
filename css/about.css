@@ -6,8 +6,9 @@
 .title {
   text-align: center;
   color: #65B32E;
-  font-size:xx-large;
+  font-size: xx-large;
 }
+
 .main-text {
   text-align: justify;
   color: #65B32E;
@@ -16,9 +17,10 @@
   margin-right: 50px;
 }
 
-.main-text > p {
+.main-text>p {
   font-size: 1rem;
 }
+
 .highlight {
   color: white;
 }
