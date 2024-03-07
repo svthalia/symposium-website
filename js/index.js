@@ -204,7 +204,8 @@ async function loadingBarAnimation(speed) {
 //  in their specific order.
 async function onInnerPageLoad()  {
 //  Getting the requried loading lines and updating 
-//  the one that denotes that loaded Page.
+    //  the one that denotes that loaded Page.
+    document.getElementById("on-load-center-box").style.visibility = "hidden";
     let loadingLines = document.getElementsByClassName("loading-output");
     document.getElementById("page-identifier").innerText = fileName;
 
@@ -216,6 +217,7 @@ async function onInnerPageLoad()  {
         loadingLines[i].style.visibility = "visible";
         await sleep(25);
     }  
+    document.getElementById("on-load-center-box").style.visibility = "visible";
 }
 
 //  Resets the loading part of the page, preparing
