@@ -140,13 +140,6 @@ async function buttonPress(buttonIdent) {
         //  Flaging the button as pressed and writing to the shell.
         isButtonPressed = true;
         await writeCurrentCommandToShell(buttonIdent);
-
-        //  Incrementing the button press counter in order 
-        //  correctly display the commands.
-        buttonPresses++;
-
-        //  Flagging the button as released.
-        isButtonPressed = false;
     }
 }
 
@@ -203,6 +196,9 @@ async function loadingBarAnimation(speed) {
 //  Loads every piece of text required for switching to a new page
 //  in their specific order.
 async function onInnerPageLoad() {
+    // Set button-pressed during load to prevent issues
+    // NOTE: Should honestly get a better solution, this is kinda jank.
+    isButtonPressed = true;
     //  Getting the requried loading lines and updating 
     //  the one that denotes that loaded Page.
     document.getElementById("on-load-center-box").style.visibility = "hidden";
@@ -218,6 +214,9 @@ async function onInnerPageLoad() {
         await sleep(25);
     }
     document.getElementById("on-load-center-box").style.visibility = "visible";
+    
+    // Undo first assignment
+    isButtonPressed = false;
 }
 
 //  Resets the loading part of the page, preparing
@@ -239,6 +238,7 @@ async function resetOnInnerPageLoad() {
 //  Loads everything needed for the page.
 async function loadAssets() {
     blink.start();
+    isButtonPressed = false;
     await onInnerPageLoad();
 }
 
