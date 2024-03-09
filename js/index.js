@@ -120,7 +120,7 @@ async function writeCurrentCommandToShell(commandIdent) {
     document.getElementById("highlighter").innerText = rootCat + pageNames[commandIdent];
     await reconstructInnerHtmlID("highlighter", 50);
 
-    window.location.href = "http://127.0.0.1:5500/" + pageNames[commandIdent];
+    window.location.href = "/" + pageNames[commandIdent];
 }
 
 //  How each shell-button press is handled.
