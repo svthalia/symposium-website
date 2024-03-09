@@ -1,15 +1,10 @@
-/**************************/
 /*  Globals and Constants */
-/**************************/
 
 const blink = new blinkerTimer();
 const shellButtons = document.getElementsByClassName("shell-button");
-
-var buttonPresses = 0;
 var isButtonPressed = false;
 
-//  Strings for reference in order to represent
-//  the different shell commands.
+//  Shell reference strings
 const rootCommand = "root@thalia-user: ~/sbin$ ";
 const rootCat = "cat ";
 const highlighter = "_";
@@ -23,60 +18,43 @@ const pageNames = [
 ];
 
 const fileName = location.href.split("/").slice(-1);
-
 const activeLoadBar = "[---------------------------------]";
 const inactiveLoadBar = "Requesting Access."
 
-/********************/
 /* Helper Functions */
-/********************/
 
 //  Template for replacing characters within a string.
 String.prototype.replaceAt = function (indexToReplace, replacement) {
     return this.substring(0, indexToReplace) + replacement + this.substring(indexToReplace + replacement.length);
 }
 
-//  Template for the timer that controls the blinking of
-//  the shell highlighter. *.start() starts the global timer,
-//  and *.stop() stops the global timer.
+//  Shell highlight timer
+//  .start() & .stop() can be used to manager the global timer.
 function blinkerTimer() {
-    //  The two possible states.
-    var stop, resume;
-
     //  Starting the timer by creating a new instance.
     this.start = () => {
         timer = setInterval(() => {
-            //  Updating the command highlighter
             let commandHighlighter = document.getElementById("highlighter");
 
-            //  Fliping the states of the highlighter.
             if (commandHighlighter.style.visibility == "hidden")
                 commandHighlighter.style.visibility = "visible";
-
             else
-
                 commandHighlighter.style.visibility = "hidden";
         }, 500)
     };
 
-    //  Stopping the timer by killing its current instance,
-    //  and making sure the blinker is visible.
     this.stop = () => {
         clearInterval(timer);
         document.getElementById("highlighter").style.visibility = "visible";
     };
 }
 
-//  Sleeps for a specified amount of time
-//  in ms. Very useful in combination
-//  with 'async' and 'await'.
+//  Sleep timer for async/await
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-/**************************/
 /* Shell & Menu Functions */
-/**************************/
 
 //  Gradually reconstructs the text contents of a
 //  given html element. 'htmlElementID' help get the
@@ -111,11 +89,10 @@ async function reconstructInnerHtmlID(htmlElementID, speed) {
     }
 }
 
-//  Writes a command to the current command line. The
-//  command is denoted by the commandIdent which corresponds
-//  to an existing command.
-async function writeCurrentCommandToShell(commandIdent) {
-    //  Briefly chaging the contents of the highlighter to achieve the animation.
+//  Writes a command to the current command line. After finishing the animation, redirect to new page is fired.
+
+async function prepareRedirect(commandIdent) {
+    //  Briefly changing the contents of the highlighter to prep for the animation.
     document.getElementById("highlighter").innerText = "";
     document.getElementById("highlighter").innerText = rootCat + pageNames[commandIdent];
     await reconstructInnerHtmlID("highlighter", 50);
@@ -123,41 +100,17 @@ async function writeCurrentCommandToShell(commandIdent) {
     window.location.href = "/" + pageNames[commandIdent];
 }
 
-//  How each shell-button press is handled.
-//  The highlighter stops blinking, and the corresponding
-//  command for that button is written sequentiantly to the
-//  shell. There is also a check to avoid multiple button
-//  presses at a time. 'buttonIdent' just identifies
-//  which button was pressed.
+// Handler for left-hand buttons
 async function buttonPress(buttonIdent) {
     if (!isButtonPressed) {
-        //  Breifly stopping the highlighting animation.
-
         blink.stop();
         await resetOnInnerPageLoad();
-
-
-        //  Flaging the button as pressed and writing to the shell.
         isButtonPressed = true;
-        await writeCurrentCommandToShell(buttonIdent);
+        await prepareRedirect(buttonIdent);
     }
 }
 
-/******************************/
 /* Top-loading page functions */
-/******************************/
-
-//  The functions work very nicely together.
-//  Still they need to be called only when the inner
-//  page loads/ or during. Didn't get to do it as a truly
-//  single-page application, so for showing the functionalities
-//  and animations I was calling these functions inside the button
-//  press function.
-//
-//  Maybe a flag would be a good idea to know when the animations
-//  have finished and the page can be loaded - nothing special,
-//  just a bool value.
-//
 //  Always call 'resetOnInnerPageLoad()' before 'onInnerPageLoad'.
 
 
@@ -173,7 +126,7 @@ async function loadingBarAnimation(speed) {
     loadingBar.innerHTML = tempAsset;
 
     //  Replacing each unloaded character one by one
-    //  wiht '\'.
+    //  with '\'.
     for (i = 1; i < activeLoadBar.length - 1; i++) {
         tempAsset = tempAsset.replaceAt(i, '\\');
 
@@ -214,7 +167,7 @@ async function onInnerPageLoad() {
         await sleep(25);
     }
     document.getElementById("on-load-center-box").style.visibility = "visible";
-    
+
     // Undo first assignment
     isButtonPressed = false;
 }
@@ -235,19 +188,15 @@ async function resetOnInnerPageLoad() {
     loadBar.innerHTML = inactiveLoadBar;
 }
 
-//  Loads everything needed for the page.
+//  Page setup after initial load
 async function loadAssets() {
     blink.start();
-    isButtonPressed = false;
     await onInnerPageLoad();
 }
 
-//  Onload behaviour for different elements.
+// Main workings on DOM
 document.onload = loadAssets();
-
-//  Beahviour for buttons.
 shellButtons[0].onclick = () => { buttonPress(0) };
 shellButtons[1].onclick = () => { buttonPress(1) };
 shellButtons[2].onclick = () => { buttonPress(2) };
 shellButtons[3].onclick = () => { buttonPress(3) };
-
