@@ -1,6 +1,13 @@
+/* General Setup & Attributes */
+
 @font-face {
   font-family: "OCR A Extended";
   src: url(../resources/OCRAEXT.TTF);
+}
+
+body {
+  margin: 0;
+  background-color: #191a18;
 }
 
 *,
@@ -12,10 +19,15 @@
   border-color: #e5e7eb;
 }
 
-body {
+p {
   margin: 0;
-  background-color: #191a18;
+  font-family: "OCR A Extended";
+  color: #65B32E;
+  font-size: 0.75rem;
 }
+
+/* Page layout rules */
+/* CSS Grid is used for base boxy layout */
 
 #top-bar {
   z-index: 2;
@@ -25,21 +37,6 @@ body {
 
   background-color: #2E2F2D;
 }
-
-p {
-  margin: 0;
-  font-family: "OCR A Extended";
-  color: #65B32E;
-  font-size: 0.75rem;
-}
-
-/****************/
-/* Top bar divs */
-/****************/
-
-/* Main styling for the bard that spans
-  * the entirity of the webpage.
-  */
 
 .min-tab {
   display: flex;
@@ -53,54 +50,8 @@ p {
   background-color: #20201D;
 }
 
-.min-tab p {
-  font-size: 1rem;
-  margin-right: 1vw;
-}
-
 #shell-tab {
   margin-left: 1rem;
-}
-
-.cross-stand-alone {
-  position: relative;
-
-  width: 20px;
-  height: 20px;
-
-  margin-top: 0px;
-  margin-right: 10px;
-  padding: 0;
-  border: 0;
-
-  background: none;
-}
-
-.cross-stand-alone:before,
-.cross-stand-alone:after {
-  position: absolute;
-  top: 7px;
-  left: 0;
-  right: 0;
-
-  height: 4px;
-
-  content: "";
-
-  background: #2E2F2D;
-  border-radius: 4px;
-}
-
-.cross-stand-alone:before {
-  transform: rotate(45deg);
-}
-
-.cross-stand-alone:after {
-  transform: rotate(-45deg);
-}
-
-.cross-stand-alone span {
-  display: block;
 }
 
 #grid {
@@ -117,6 +68,7 @@ p {
   grid-row: 2;
   grid-column: 1;
 }
+
 #command-line-box {
   grid-row: 3;
   grid-column: 1;
@@ -156,7 +108,20 @@ p {
 #on-load-top-box {
   grid-row: 1;
   grid-column: 2;
+  
+  height: 13vh;
+
+  padding-left: 1.5vw;
+  padding-top: 2vh;
 }
+
+#on-load-center-box {
+  grid-row: 2 / 6;
+  grid-column: 2;
+}
+
+/* Left bar buttons */
+
 
 #button-box {
   height: calc(100% - 4vh);
@@ -191,17 +156,8 @@ p {
   background-color: #191A18;
 }
 
-#on-load-top-box {
-  height: 13vh;
+/* Classes for JS */
 
-  padding-left: 1.5vw;
-  padding-top: 2vh;
-}
-
-#on-load-center-box {
-  grid-row: 2 / 6;
-  grid-column: 2;
-}
 .loading-output {
   visibility: hidden;
 }
@@ -210,34 +166,14 @@ p {
   visibility: visible;
 }
 
+/* Text Sizes */
+
+.min-tab p {
+  font-size: 1rem;
+  margin-right: 1vw;
+}
+
+
 #on-load-center-box p {
   font-size: 1.25rem;
-}
-
-/* Content */
-#about-container {
-  background-color: #191A18;
-  font-family: "OCR A Extended";
-}
-
-.title {
-  text-align: center;
-  color: #65B32E;
-  font-size: xx-large;
-}
-
-.main-text {
-  text-align: justify;
-  color: #65B32E;
-  line-height: 300%;
-  margin-left: 3rem;
-  margin-right: 3rem;
-}
-
-.main-text>p {
-  font-size: 1rem;
-}
-
-.highlight {
-  color: white;
 }
