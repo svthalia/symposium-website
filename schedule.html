@@ -1,250 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<html>
-
 <head>
-  <link rel="icon" type="image/x-icon" href="./resources/logo_mark.png">
+  <link rel="icon" href="./resources/logo_mark.png" type="image/x-icon">
   <meta charset="UTF-8">
-  <title>Thalia Symposium: Schedule</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thalia Symposium: Cybercrime</title>
 
-  <link href="./css/index.css" rel="stylesheet">
-  <link rel="stylesheet" href="./css/about.css">
+  <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="./css/cross.css">
   <link rel="stylesheet" href="./css/schedule.css">
 </head>
 
 <body>
-  <div id="main-container">
-    <div id="top-bar">
-      <div class="min-tab" id="shell-tab">
-        <div class="cross-stand-alone"></div>
-        <p>Shell</p>
+  <div id="top-bar">
+    <div class="min-tab" id="shell-tab">
+      <div class="cross-stand-alone"></div>
+      <p>Shell</p>
+    </div>
+  </div>
+
+  <div id="grid">
+    <div id="logo-box">
+      <img src="./resources/logo.png">
+    </div>
+
+    <div class="shell-box" id="copyright-box">
+      <p>Symposium Shell [ Version 04.0.02509.1105 ] <br> <br>
+        Copyright Thalia Symposiumcie 2024 <br>
+        All rights reserved</p>
+    </div>
+
+    <div class="shell-box" id="command-line-box">
+      <p id="command-previous">root@thalia-user: ~/sbin$ cat schedule.html</p>
+      <p id="command-input">root@thalia-user: ~/sbin$ <span id="highlighter">_</span></p>
+    </div>
+
+    <div class="shell-box" id="menu-box">
+      <div id="button-box">
+        <button class="shell-button">
+          [ Main ]
+        </button>
+
+        <button class="shell-button">
+          [ Speakers ]
+        </button>
+
+        <button class="shell-button">
+          [ Sponsors ]
+        </button>
+
+        <button class="shell-button">
+          [ Schedule ]
+        </button>
       </div>
     </div>
 
-    <div id="shell">
-      <div class="shell-box" id="logo-box">
-        <img src="./resources/logo.png">
-      </div>
-
-      <div class="shell-box" id="copyright-box">
-        <p>Symposium Shell [ Version 04.0.02509.1105 ] <br> <br>
-          (c) Copyright Symposium Committee 2023. All rights reserved.</p>
-      </div>
-
-      <div class="shell-box" id="command-line-box">
-        <p id="command-previous">root@thalia-user: ~/sbin$ cat schedule.html</p>
-        <p id="command-input">root@thalia-user: ~/sbin$ <span id="highlighter">_</span></p>
-      </div>
-
-      <div class="shell-box" id=menu-box>
-        <div id="button-box">
-          <button class="shell-button">
-            [ Main ]
-          </button>
-
-          <button class="shell-button">
-            [ Speakers ]
-          </button>
-
-          <button class="shell-button">
-            [ Sponsors ]
-          </button>
-
-          <button class="shell-button">
-            [ Schedule ]
-          </button>
-        </div>
-      </div>
-
-      <div class="shell-box" id="info-box">
-        <p>root@thalia-user: ~/Local$: cat> Contact_Info.txt</p>
-        <p id="start-info">[ OK ] theactual.email.@thalia.nu - e-mail</p>
-        <p>[ OK ] 001122334455 - phone number</p>
-      </div>
-
+    <div class="shell-box" id="info-box">
+      <p>root@thalia-user: ~/Local$: cat Contact.txt</p>
+      <br>
+      <p id="start-info"> [ OK ] email: symposium@thalia.nu </p>
+      <p>[ OK ] phone: +31 (0)24 3653498</p>
+      <p>[ OK ] address: Toernooiveld 212, 6525 EC, Nijmegen</p>
     </div>
 
-    <div id="inner-page">
-      <div id="on-load-top-box">
-        <p class="loading-output">root@thalia-user:~/Local$ <span id="load-bar">Awaiting endpoint.</span></p> <br>
-        <p class="loading-output">root@thalia-user:~/Local$ <span id="page-identifier"></span> loaded succesfully!</p>
-        <br>
-        <p class="loading-output">root@thalia-user:~/Local$ Awaiting choice.</p> <br>
-        <p class="loading-output">
-          /**********************************************************************************************************************************************************/
-        </p>
-      </div>
+    <div id="on-load-top-box">
+      <p class="loading-output">root@thalia-user:~/Local$ <span id="load-bar">Awaiting endpoint.</span></p><br>
+      <p class="loading-output">root@thalia-user:~/Local$ <span id="page-identifier"></span> loaded succesfully!</p><br>
+      <p class="loading-output">root@thalia-user:~/Local$ Awaiting choice.</p><br>
+      <p class="loading-output"></p>
+    </div>
 
-      <div id="on-load-center-box">
-        <div id="schedule-container">
-          <div class="box-container">
-            <table>
-              <tr>
-                <th>Time</th>
-                <th>Activity 1</th>
-                <th>Speaker</th>
-                <th>Activity 2</th>
-              </tr>
-              <tr>
-                <td>10:00-10:20</td>
-                <td>Walk-in</td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>10:20-10:30</td>
-                <td>Opening</td>
-                <td></td>
-                <td>Filler</td>
-              </tr>
-              <tr>
-                <td>10:30-11:20</td>
-                <td>Talk 1</td>
-                <td>Speaker 1</td>
-                <td>Filler</td>
-              </tr>
-              <tr>
-                <td>11:30-12:20</td>
-                <td>Talk 2</td>
-                <td>Speaker 2</td>
-                <td>Filler</td>
-              </tr>
-              <tr>
-                <td>12:20-13:40</td>
-                <td>Lunch && Market</td>
-                <td></td>
-                <td>Filler</td>
-              </tr>
-              <tr>
-                <td>13:40-14:30</td>
-                <td>Talk 3</td>
-                <td>Speaker 3</td>
-                <td>Speeddates</td>
-              </tr>
-              <tr>
-                <td>14:40-15:10</td>
-                <td>Coffee && Market</td>
-                <td></td>
-                <td>Filler</td>
-              </tr>
-              <tr>
-                <td>15:10-16:00</td>
-                <td>Talk 4</td>
-                <td>Speaker 4</td>
-                <td>Filler</td>
-              </tr>
-              <tr>
-                <td>16:10-17:00</td>
-                <td>Talk 5</td>
-                <td>Speaker 5</td>
-                <td>Filler</td>
-              </tr>
-              <tr>
-                <td>17:00-19:00</td>
-                <td>Borrel</td>
-                <td></td>
-                <td>Filler</td>
-              </tr>
-            </table>
+    <div id="on-load-center-box">
+      <div id="schedule-container">
+        <div class="box-container">
+          <table>
+            <tr>
+              <th>Time</th>
+              <th>Activity 1</th>
+              <th>Speaker</th>
+              <th>Activity 2</th>
+            </tr>
+            <tr>
+              <td>10:00-10:20</td>
+              <td>Walk-in</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>10:20-10:30</td>
+              <td>Opening</td>
+              <td></td>
+              <td>Filler</td>
+            </tr>
+            <tr>
+              <td>10:30-11:20</td>
+              <td>Talk 1</td>
+              <td>Speaker 1</td>
+              <td>Filler</td>
+            </tr>
+            <tr>
+              <td>11:30-12:20</td>
+              <td>Talk 2</td>
+              <td>Speaker 2</td>
+              <td>Filler</td>
+            </tr>
+            <tr>
+              <td>12:20-13:40</td>
+              <td>Lunch && Market</td>
+              <td></td>
+              <td>Filler</td>
+            </tr>
+            <tr>
+              <td>13:40-14:30</td>
+              <td>Talk 3</td>
+              <td>Speaker 3</td>
+              <td>Speeddates</td>
+            </tr>
+            <tr>
+              <td>14:40-15:10</td>
+              <td>Coffee && Market</td>
+              <td></td>
+              <td>Filler</td>
+            </tr>
+            <tr>
+              <td>15:10-16:00</td>
+              <td>Talk 4</td>
+              <td>Speaker 4</td>
+              <td>Filler</td>
+            </tr>
+            <tr>
+              <td>16:10-17:00</td>
+              <td>Talk 5</td>
+              <td>Speaker 5</td>
+              <td>Filler</td>
+            </tr>
+            <tr>
+              <td>17:00-19:00</td>
+              <td>Borrel</td>
+              <td></td>
+              <td>Filler</td>
+            </tr>
+          </table>
+          <br>
+          <br>
+          <div id="info-container">
+            <div id="pattern">
 
-            <p>
-              /****************************************************************************************************************/
-            </p>
-
-            <div id="info-container">
-              <div id="pattern">
-
-                <div class="top-row">
-                  <div class="pattern-segment">
-                    /-----/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  </div>
+              <div class="top-row">
+                <div class="pattern-segment">
+                  /-----/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 </div>
-
-                <div class="top-row">
-                  <div class="pattern-segment">
-                    &nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  </div>
-                </div>
-
-                <div class="top-row">
-                  <div class="pattern-segment">
-                    &nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;/--.&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;/---/&nbsp;</div>
-                </div>
-
-                <div class="top-row">
-                  <div class="pattern-segment">
-                    &nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;/&nbsp;&nbsp;/-&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;/&nbsp;
-                  </div>
-                </div>
-
-                <div class="top-row">
-                  <div class="pattern-segment">/-----/&nbsp;/&nbsp;&nbsp;/&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;/---/&nbsp;
-                  </div>
-                </div>
-
-                <div class="line-row">
-                  <div class="pattern-segment">/**********************/</div>
-                </div>
-
-                <div class="bottom-row">
-                  <div class="pattern-segment">
-                    &nbsp;&nbsp;&nbsp;/-----/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  </div>
-                </div>
-
-                <div class="bottom-row">
-                  <div class="pattern-segment">
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  </div>
-                </div>
-
-                <div class="bottom-row">
-                  <div class="pattern-segment">
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;_/-/&nbsp;&nbsp;/--/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  </div>
-                </div>
-
-                <div class="bottom-row">
-                  <div class="pattern-segment">
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;/&nbsp;&nbsp;/&nbsp;&nbsp;/&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  </div>
-                </div>
-
-                <div class="bottom-row">
-                  <div class="pattern-segment">
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;/-/_&nbsp;&nbsp;/--/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  </div>
-                </div>
-
-                <div class="line-row">
-                  <div class="pattern-segment">/**********************/</div>
-                </div>
-
               </div>
 
-              <p id="info-text">
-                &nbsp;&nbsp;&nbsp;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
-                dolor. Aenean massa.
-                Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,
-                ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. <br>
-                &nbsp;&nbsp;&nbsp; Donec pede justo,
-                fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis
-                vitae, justo.
-                Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper
-                nisi.
-                Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
-                Aliquam
-                lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius
-                laoreet. Quisque
-                rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget
-                dui.
-              </p>
-            </div>
-          </div>
+              <div class="top-row">
+                <div class="pattern-segment">
+                  &nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </div>
+              </div>
 
+              <div class="top-row">
+                <div class="pattern-segment">
+                  &nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;/--.&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;/---/&nbsp;</div>
+              </div>
+
+              <div class="top-row">
+                <div class="pattern-segment">
+                  &nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;/&nbsp;&nbsp;/-&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;/&nbsp;
+                </div>
+              </div>
+
+              <div class="top-row">
+                <div class="pattern-segment">/-----/&nbsp;/&nbsp;&nbsp;/&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;/---/&nbsp;
+                </div>
+              </div>
+
+              <div class="line-row">
+                <div class="pattern-segment">/**********************/</div>
+              </div>
+
+              <div class="bottom-row">
+                <div class="pattern-segment">
+                  &nbsp;&nbsp;&nbsp;/-----/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </div>
+              </div>
+
+              <div class="bottom-row">
+                <div class="pattern-segment">
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </div>
+              </div>
+
+              <div class="bottom-row">
+                <div class="pattern-segment">
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;_/-/&nbsp;&nbsp;/--/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </div>
+              </div>
+
+              <div class="bottom-row">
+                <div class="pattern-segment">
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;/&nbsp;&nbsp;/&nbsp;&nbsp;/&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </div>
+              </div>
+
+              <div class="bottom-row">
+                <div class="pattern-segment">
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;/-/_&nbsp;&nbsp;/--/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </div>
+              </div>
+
+              <div class="line-row">
+                <div class="pattern-segment">/**********************/</div>
+              </div>
+
+            </div>
+
+            <p id="info-text">
+              &nbsp;&nbsp;&nbsp;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
+              dolor. Aenean massa.
+              Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,
+              ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. <br>
+              &nbsp;&nbsp;&nbsp; Donec pede justo,
+              fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis
+              vitae, justo.
+              Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper
+              nisi.
+              Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
+              Aliquam
+              lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius
+              laoreet. Quisque
+              rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget
+              dui.
+            </p>
+          </div>
         </div>
-      </div>
     </div>
   </div>
 
