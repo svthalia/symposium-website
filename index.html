@@ -1,115 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<html>
-
 <head>
-  <link rel="icon" type="image/x-icon" href="./resources/logo_mark.png">
+  <link rel="icon" href="./resources/logo_mark.png" type="image/x-icon">
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Thalia Symposium: Cybercrime</title>
 
-  <link href="./css/index.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/index.css">
 </head>
 
 <body>
-  <div id="main-container">
-    <div id="top-bar">
-      <div class="min-tab" id="shell-tab">
-        <div class="cross-stand-alone"></div>
-        <p>Shell</p>
+  <div id="top-bar">
+    <div class="min-tab" id="shell-tab">
+      <div class="cross-stand-alone"></div>
+      <p>Shell</p>
+    </div>
+  </div>
+
+  <div id="grid">
+    <div id="logo-box">
+      <img src="./resources/logo.png">
+    </div>
+
+    <div class="shell-box" id="copyright-box">
+      <p>Symposium Shell [ Version 04.0.02509.1105 ] <br> <br>
+        Copyright Thalia Symposiumcie 2024 <br>
+        All rights reserved</p>
+    </div>
+
+    <div class="shell-box" id="command-line-box">
+      <p id="command-previous">root@thalia-user: ~/sbin$ cat index.html</p>
+      <p id="command-input">root@thalia-user: ~/sbin$ <span id="highlighter">_</span></p>
+    </div>
+
+    <div class="shell-box" id="menu-box">
+      <div id="button-box">
+        <button class="shell-button">
+          [ Main ]
+        </button>
+
+        <button class="shell-button">
+          [ Speakers ]
+        </button>
+
+        <button class="shell-button">
+          [ Sponsors ]
+        </button>
+
+        <button class="shell-button">
+          [ Schedule ]
+        </button>
       </div>
     </div>
 
-    <div id="shell">
-      <div class="shell-box" id="logo-box">
-        <img src="./resources/logo.png">
-      </div>
+    <div class="shell-box" id="info-box">
+      <p>root@thalia-user: ~/Local$: cat Contact.txt</p>
+      <br>
+      <p id="start-info"> [ OK ] email: symposium@thalia.nu </p>
+      <p>[ OK ] phone: +31 (0)24 3653498</p>
+      <p>[ OK ] address: Toernooiveld 212, 6525 EC, Nijmegen</p>
+    </div>
 
-      <div class="shell-box" id="copyright-box">
-        <p>Symposium Shell [ Version 04.0.02509.1105 ] <br> <br>
-          (c) Copyright Symposium Committee 2023. All rights reserved.</p>
-      </div>
+    <div id="on-load-top-box">
+      <p class="loading-output">root@thalia-user:~/Local$ <span id="load-bar">Awaiting endpoint.</span></p><br>
+      <p class="loading-output">root@thalia-user:~/Local$ <span id="page-identifier"></span> loaded succesfully!</p><br>
+      <p class="loading-output">root@thalia-user:~/Local$ Awaiting choice.</p><br>
+      <p class="loading-output"></p>
+    </div>
 
-      <div class="shell-box" id="command-line-box">
-        <p id="command-previous">root@thalia-user: ~/sbin$ cat index.html</p>
-        <p id="command-input">root@thalia-user: ~/sbin$ <span id="highlighter">_</span></p>
-      </div>
-
-      <div class="shell-box" id=menu-box>
-        <div id="button-box">
-          <button class="shell-button">
-            [ Main ]
-          </button>
-
-          <button class="shell-button">
-            [ Speakers ]
-          </button>
-
-          <button class="shell-button">
-            [ Sponsors ]
-          </button>
-
-          <button class="shell-button">
-            [ Schedule ]
-          </button>
+    <div id="on-load-center-box">
+      <div id="about-container">
+        <div class="title">
+          About Symposium
         </div>
-      </div>
 
-      <div class="shell-box" id="info-box">
-        <p>root@thalia-user: ~/Local$: cat> Contanct_Info.txt</p>
-        <p id="start-info">[ OK ] theactual.email.@thalia.nu - e-mail</p>
-        <p>[ OK ] 001122334455 - phone number</p>
-      </div>
+        <div class="main-text">
+          <p><span class="highlight">Symposium</span> is ... Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            sed do
+            eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+            ullamco laboris nisi ut aliquip ex ea commodo consequat. <span class="highlight">Symposium</span>. Duis
+            aute
+            irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <span
+              class="highlight">Symposium</span>.
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+            id est laborum.</p>
+        </div>
 
-    </div>
+        <div class="title">
+          The Theme: Cyber Crime
+        </div>
 
-    <div id="inner-page">
-      <div id="on-load-top-box">
-        <p class="loading-output">root@thalia-user:~/Local$ <span id="load-bar">Awaiting endpoint.</span></p> <br>
-        <p class="loading-output">root@thalia-user:~/Local$ <span id="page-identifier"></span> loaded succesfully!</p>
-        <br>
-        <p class="loading-output">root@thalia-user:~/Local$ Awaiting choice.</p> <br>
-        <p class="loading-output">
-          /**********************************************************************************************************************************************************/
-        </p>
-      </div>
-
-      <div id="on-load-center-box">
-        <div id="about-container">
-          <div class="title">
-            About Symposium
-          </div>
-
-          <div class="main-text">
-            <p><span class="highlight">Symposium</span> is ... Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-              sed do
-              eiusmod tempor
-              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-              ullamco laboris nisi ut aliquip ex ea commodo consequat. <span class="highlight">Symposium</span>. Duis
-              aute
-              irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <span
-                class="highlight">Symposium</span>.
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
-              id est laborum.</p>
-          </div>
-
-          <div class="title">
-            The Theme: Cyber Crime
-          </div>
-
-          <div class="main-text">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore
-              magna aliqua.
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat.
-              <span class="highlight">Symposium</span>.
-              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-              Excepteur sint occaecat cupidatat non proident, <span class="highlight">Symposium</span> sunt in culpa qui
-              officia deserunt mollit anim id est laborum.
-            </p>
-          </div>
+        <div class="main-text">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore
+            magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat.
+            <span class="highlight">Symposium</span>.
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            Excepteur sint occaecat cupidatat non proident, <span class="highlight">Symposium</span> sunt in culpa qui
+            officia deserunt mollit anim id est laborum.
+          </p>
         </div>
       </div>
     </div>
