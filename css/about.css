@@ -1,3 +1,4 @@
+/* Content */
 #about-container {
   background-color: #191A18;
   font-family: "OCR A Extended";
@@ -13,8 +14,8 @@
   text-align: justify;
   color: #65B32E;
   line-height: 300%;
-  margin-left: 50px;
-  margin-right: 50px;
+  margin-left: 3rem;
+  margin-right: 3rem;
 }
 
 .main-text>p {

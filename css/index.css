@@ -1,18 +1,14 @@
-/*********************/
-/* General attributes*/
-/*********************/
+/* General Setup & Attributes */
 
-/* Font Setup */
 @font-face {
   font-family: "OCR A Extended";
   src: url(../resources/OCRAEXT.TTF);
 }
 
-/* 
- * Structuring the general layout of the page. 
- * Also setting some overall style rules such as
- * the fonts or margins
- */
+body {
+  margin: 0;
+  background-color: #191a18;
+}
 
 *,
 ::before,
@@ -23,95 +19,24 @@
   border-color: #e5e7eb;
 }
 
-::before,
-::after {
-  --tw-content: '';
-}
-
-body {
-  margin: 0;
-
-  background-color: #191A18;
-  overflow: hidden;
-}
-
 p {
   margin: 0;
-
   font-family: "OCR A Extended";
   color: #65B32E;
   font-size: 0.75rem;
 }
 
-button {
-  font-family: inherit;
-
-  font-size: 100%;
-  color: inherit;
-
-  margin: 0;
-  padding: 0;
-
-  cursor: pointer;
-}
-
-img {
-  display: block;
-}
-
-/*************/
-/* Main divs */
-/*************/
-
-/* Creating and setting the size of the main
-  * divs of the page. Most of them are defined
-  * statically, so it might be a good idea to
-  * look at the design and maybe implemet something
-  * for mobile if time allows.
-  */
-
-#main-container {
-  height: 1080px;
-  width: 1920px;
-}
+/* Page layout rules */
+/* CSS Grid is used for base boxy layout */
 
 #top-bar {
   z-index: 2;
 
-  width: 100%;
-  height: 45px;
+  width: 100vw;
+  height: 44px;
 
   background-color: #2E2F2D;
 }
-
-#shell {
-  display: inline-block;
-  height: 880px;
-  width: 520px;
-
-  padding: 15px;
-
-  border-right: 1px solid #2E2F2D;
-}
-
-#inner-page {
-  display: inline-block;
-  position: absolute;
-
-  top: 45px;
-  left: 520px;
-
-  height: 880px;
-  width: 1400px;
-}
-
-/****************/
-/* Top bar divs */
-/****************/
-
-/* Main styling for the bard that spans
-  * the entirity of the webpage.
-  */
 
 .min-tab {
   display: flex;
@@ -119,223 +44,119 @@ img {
   align-items: center;
   justify-content: center;
 
-  width: 160px;
+  width: max(160px, 8.5vw);
   height: 100%;
 
   background-color: #20201D;
 }
 
-.min-tab p {
-  font-size: 15px;
-  margin-right: 20px;
-}
-
 #shell-tab {
-  margin-left: 20px;
+  margin-left: 1rem;
 }
 
-#new-tab {
-  visibility: hidden;
+#grid {
+  display: grid;
+  height: calc(100vh - 44px);
+  width: 100vw;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1.2fr repeat(2, 1fr) 3.5fr 1.2fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
 }
 
-/*
-  * Building a cross.
-  */
-
-.cross-stand-alone {
-  position: relative;
-
-  width: 20px;
-  height: 20px;
-
-  margin-top: 0px;
-  margin-right: 10px;
-  padding: 0;
-  border: 0;
-
-  background: none;
+#copyright-box {
+  grid-row: 2;
+  grid-column: 1;
 }
 
-.cross-stand-alone:before,
-.cross-stand-alone:after {
-  position: absolute;
-  top: 7px;
-  left: 0;
-  right: 0;
-
-  height: 4px;
-
-  content: "";
-
-  background: #2E2F2D;
-  border-radius: 4px;
+#command-line-box {
+  grid-row: 3;
+  grid-column: 1;
 }
-
-.cross-stand-alone:before {
-  transform: rotate(45deg);
-}
-
-.cross-stand-alone:after {
-  transform: rotate(-45deg);
-}
-
-.cross-stand-alone span {
-  display: block;
-}
-
-.visually-hidden {
-  position: absolute !important;
-  clip: rect(1px, 1px, 1px, 1px);
-  padding: 0 !important;
-
-  height: 1px !important;
-  width: 1px !important;
-
-  border: 0 !important;
-
-  overflow: hidden;
-}
-
-/**************/
-/* Shell divs */
-/**************/
-
-/* The definitions are arrange from top-to-button relative
-  * to how the html elements have been defined.
-  */
-
-.shell-box {
-  margin-top: 20px;
-
-  border-bottom: 1px solid #2E2F2D;
-}
-
-/**********/
-/* -Logo- */
-/**********/
 
 #logo-box {
   display: block;
-
-  height: 140px;
-  width: 100%;
-
-  margin-top: 1.2%;
+  margin: auto;
+  text-align: center;
 }
 
 #logo-box img {
   width: 95%;
 
   margin: auto;
+  display: block;
 }
 
-/***************/
-/* -Copyright- */
-/***************/
-
-#copyright-box {
-  height: 88px;
-  width: 100%;
+.shell-box {
+  margin-top: 1rem;
+  margin-left: 1rem;
+  border-bottom: 1px solid #2E2F2D;
 }
-
-/******************/
-/* -Command line- */
-/******************/
-
-#command-line-box {
-  height: 88px;
-  width: 100%;
-}
-
-#highlighter {
-  visibility: visible;
-}
-
-/*************/
-/* -Buttons- */
-/*************/
 
 #menu-box {
-  height: 380px;
-  width: 100%;
-
+  grid-row: 4;
+  grid-column: 1;
   margin-top: 0;
-  margin-bottom: 0;
 }
 
+#info-box {
+  grid-row: 5;
+  grid-column: 1;
+  border-bottom: none;
+}
+
+#on-load-top-box {
+  grid-row: 1;
+  grid-column: 2;
+  
+  height: 13vh;
+
+  padding-left: 1.5vw;
+  padding-top: 2vh;
+}
+
+#on-load-center-box {
+  grid-row: 2 / 6;
+  grid-column: 2;
+}
+
+/* Left bar buttons */
+
+
 #button-box {
-  height: 100%;
-  width: 60%;
+  height: calc(100% - 4vh);
+  width: 100%;
 
   background-color: #1C1C1C;
 
   margin-left: auto;
   margin-right: auto;
 
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
 }
 
 .shell-button {
   height: 25%;
   width: 100%;
-
+  border: 0;
+  padding: 0;
   background-color: transparent;
   color: #264413;
   font-family: "OCR A Extended";
-  font-size: 18px;
+  font-size: 1.15rem;
 
   transition: ease-in 230ms;
+  cursor: pointer;
 }
 
-/***************/
-/* -Selection- */
-/***************/
-
 .shell-button:hover {
-  font-size: 23px;
+  font-size: 1.5rem;
   color: #65B32E;
   background-color: #191A18;
 }
 
-/**********/
-/* -Info- */
-/**********/
-
-#info-box {
-  height: 88px;
-  width: 100%;
-
-  border-bottom: none;
-}
-
-/*
-  * Silly but it works.
-  * I don't think anyone will complain.
-  */
-
-#start-info {
-  margin-top: 25px;
-}
-
-/*******************/
-/* Inner page divs */
-/*******************/
-
-/*
-  * This section is divided into two, mainly the divisions that 
-  * are used for the loading animation and the actual section
-  * that is supposed to host the chosen page.
-  */
-
-/* Loading Box */
-
-#on-load-top-box {
-  height: 140px;
-  width: 100%;
-
-  padding: 30px;
-}
+/* Classes for JS */
 
 .loading-output {
   visibility: hidden;
@@ -345,47 +166,14 @@ img {
   visibility: visible;
 }
 
+/* Text Sizes */
 
-/* Inner Page */
-
-#on-load-center-box {
-  height: 740px;
-  width: 100%;
-
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
+.min-tab p {
+  font-size: 1rem;
+  margin-right: 1vw;
 }
+
 
 #on-load-center-box p {
   font-size: 1.25rem;
-}
-
-/* Content */
-#about-container {
-  background-color: #191A18;
-  font-family: "OCR A Extended";
-}
-
-.title {
-  text-align: center;
-  color: #65B32E;
-  font-size: xx-large;
-}
-
-.main-text {
-  text-align: justify;
-  color: #65B32E;
-  line-height: 300%;
-  margin-left: 50px;
-  margin-right: 50px;
-}
-
-.main-text>p {
-  font-size: 1rem;
-}
-
-.highlight {
-  color: white;
 }
