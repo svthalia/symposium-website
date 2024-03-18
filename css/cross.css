@@ -40,3 +40,46 @@
 .cross-stand-alone span {
   display: block;
 }
+
+
+/* Speakers page cross */
+.cross {
+  position: relative;
+
+  width: 20px;
+  height: 20px;
+
+  margin-top: 0px;
+  margin-right: 10px;
+  padding: 0;
+  border: 0;
+
+  background: none;
+}
+  
+.cross:before, .cross:after {
+  position: absolute;
+  top: 18px;
+  left: 0;
+  right: 0;
+
+  height: 4px;
+
+  content: "";
+
+  background: #ffffff;
+  border-radius: 4px;
+}
+  
+.cross:before {
+  transform: rotate(45deg);
+}
+
+.cross:after {
+  transform: rotate(-45deg);
+}
+  
+.cross span {
+  display: block;
+}
+  
