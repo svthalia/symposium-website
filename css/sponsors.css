@@ -12,13 +12,10 @@
   margin-right: auto;
 
   width: 40%;
-  height: 125px;
-  width: 100px;
+  height: 100px;
+  width: auto;
 
   margin-top: 10px;
-
-  border: 2px solid #000000;
-  border-radius: 3px;
 }
 
 .box-container-main {
@@ -47,7 +44,7 @@
   margin-right: 1rem;
   margin-top: 0px;
 
-  text-align: justify;
+  text-align: left;
   font-size: small;
   line-height: 120%;
 }
@@ -58,15 +55,18 @@
 
   font-size: larger;
   text-align: center;
+  margin-bottom: 4px;
 }
 
 .text-container2 p {
   margin: 0;
 }
 
+.text-container p {
+  font-size: 1rem !important;
+}
+
 .container2 {
-  display: flex;
-  flex-direction: column;
   width: 330px;
 
   border: 1px solid #000000;

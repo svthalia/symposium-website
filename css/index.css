@@ -82,8 +82,8 @@ p {
 
 #logo-box img {
   width: 95%;
-
   margin: auto;
+  margin-top: 4px;
   display: block;
 }
 
