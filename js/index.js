@@ -97,7 +97,7 @@ async function prepareRedirect(commandIdent) {
     document.getElementById("highlighter").innerText = rootCat + pageNames[commandIdent];
     await reconstructInnerHtmlID("highlighter", 50);
 
-    window.location.href = "/" + pageNames[commandIdent];
+    window.location.href = "./" + pageNames[commandIdent];
 }
 
 // Handler for left-hand buttons
