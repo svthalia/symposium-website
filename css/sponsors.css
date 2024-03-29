@@ -18,6 +18,18 @@
   margin-top: 10px;
 }
 
+#thirona {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  width: 40%;
+  height: auto;
+  width: 300px;
+
+  margin-top: 10px;
+}
+
 .box-container-main {
   margin-top: 20px;
   margin-right: 20px;
