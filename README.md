@@ -1,2 +1,2 @@
 # symposium-website
-Static Page for 2024 Thalia Symposium
+Static Page for 2025 Thalia Symposium
