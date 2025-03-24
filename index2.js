@@ -71,7 +71,7 @@ var all_link = document.getElementById("all");
 var speakers_link = document.getElementById("speakers");
 var companies_link = document.getElementById("companies");
 var talks_link = document.getElementById("talks");
-var courses = [document.getElementById("course_1"), document.getElementById("course_2"), document.getElementById("course_3"), document.getElementById("course_4"), document.getElementById("course_6"), document.getElementById("course_7"), document.getElementById("course_8"), document.getElementById("course_9"), document.getElementById("course_10"), document.getElementById("course_11")];
+var courses = [document.getElementById("course_1"), document.getElementById("course_2"), document.getElementById("course_3"), document.getElementById("course_4"), document.getElementById("course_6"), document.getElementById("course_7"), document.getElementById("course_8"), document.getElementById("course_9"), document.getElementById("course_10"), document.getElementById("course_11"), document.getElementById("course_12")];
 
 //  all course selector handler; simply display all the courses in the
 //  course grid.
@@ -111,7 +111,7 @@ companies_link.onclick = function () {
 talks_link.onclick = function () {
   for (let i = 0; i < courses.length; i++) {
     var course = courses[i];
-    if (!(i == 5 || i == 8 || i == 9)) {
+    if (!(i == 5 || i == 8 || i == 9 || i == 10)) {
       course.style.display = "none";
     } else {
       course.style.display = "block";
