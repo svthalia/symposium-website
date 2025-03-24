@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thalia Symposium 2025</title>
+  <link rel="shortcut icon" href="./resources/main_icon.png" type="image/x-icon">
+  <link rel="stylesheet" href="./output.css">
+</head>
+
+<body class="w-screen h-screen bg-gray-100 overflow-x-hidden">
+  <div id="main_container" class="w-full h-full bg-inherit border-t-3 border-pink-700">
+    <div id="mobile_side_bar"
+      class="flex justify-center absolute top-0 left-[-100%] md:hidden lg:hidden z-2 w-full h-full transition-[left] duration-350 ease-in-out">
+
+      <!-- options for better navigation within the side bar menu -->
+      <div id="mobile_side_bar_options" class="inline-block w-7/8 h-full bg-white border-t-3 border-pink-700">
+
+        <!-- home and selection buttons for the side bar -->
+        <div id="mobile_side_bar_options_top_container" class="flex items-center">
+
+          <!-- main logo fitted in the side bar -->
+          <a href="./index.html" class="flex-grow w-full h-auto">
+            <div id="mobile_logo" class="flex-grow w-full h-auto">
+              <img id="mobile_logo_button" src="./resources/main_logo.jpeg"
+                class="inline-block max-w-70 h-auto object-contain p-3 hover:cursor-pointer">
+            </div>
+          </a>
+
+          <!-- course selector button -->
+          <img src="./resources/options_courses_gray.png"
+            class="flex max-w-30 max-h-22 object-contain p-5 hover:cursor-pointer">
+        </div>
+
+        <!-- main side bar buttons -->
+        <div id="mobile_side_bar_content" class="block">
+          <a
+            href="https://ru.osiris-student.nl/onderwijscatalogus/extern/cursus?collegejaar=huidig&taal=en&cursuscode=NWI-IBC016">
+            <div
+              class="block border-t-1 p-5 border-gray-200 text-2xl hover:text-sky-600 hover:bg-sky-100 hover:cursor-pointer">
+              Open Courses </div>
+          </a>
+          <div id="mobile_portofolio_button"
+            class="block border-t-1 p-5 border-gray-200 text-2xl hover:text-sky-600 hover:bg-sky-100 hover:cursor-pointer">
+            Portfolio </div>
+          <div id="mobile_help_button"
+            class="block border-t-1 p-5 border-gray-200 text-2xl hover:text-sky-600 hover:bg-sky-100 hover:cursor-pointer">
+            Help </div>
+          <div id="mobile_settings_button"
+            class="block border-t-1 p-5 border-gray-200 text-2xl hover:text-sky-600 hover:bg-sky-100 hover:cursor-pointer">
+            Admin Tools </div>
+        </div>
+      </div>
+
+      <!-- slice that when pressed exits the side bar view -->
+      <div id="mobile_side_bar_exit" class="block w-1/8 h-full bg-none"></div>
+    </div>
+
+    <!-- curtain for fancy 'inactive' background while the sidebar is active -->
+    <div id="main_opacity_curtain"
+      class="z-1 absolute top-0 left-0 hidden md:hidden lg:hidden w-full h-full bg-black opacity-50 transition-[opacity] duration-350 ease-in-out">
+    </div>
+
+    <div id="easter_egg_opacity_curtain"
+      class="z-3 absolute top-0 left-0 hidden w-full h-full bg-black opacity-50 transition-[opacity] duration-350 ease-in-out">
+    </div>
+    <div id="easter_egg_curtain" class="z-4 absolute top-1/3 left-1/3 hidden">
+      <img id="easter_egg_img" src="./resources/easter_egg_1.jpg" class="block w-1/2 h-1/2 hover:cursor-pointer">
+    </div>
+
+    <div id="top_bar" class="z-0 block w-full h-auto bg-white">
+      <div id="top_bar_top_center"
+        class="block w-full lg:w-full xl:w-300 2xl:w-300 h-auto mr-0 ml-0 lg:mr-0 lg:ml-0 xl:mr-auto xl:ml-auto 2xl:mr-auto 2xl:ml-auto mt-0 mb-0">
+        <div id="top_bar_top_container" class="flex w-full h-auto pl-5 md:pl-0">
+          <a href="./index.html" class="hidden md:inline-block lg:inline-block flex-2 w-auto h-auto pr-1/2">
+            <div id="logo" class="hidden md:inline-block lg:inline-block flex-2 w-auto h-auto pr-1/2">
+              <img id="logo_button" src="./resources/main_logo.jpeg"
+                class="hidden md:block lg:block max-w-70 h-auto object-contain p-3 hover:cursor-pointer">
+            </div>
+          </a>
+
+          <!-- side bar for providing options for mobile users -->
+          <div id="top_side_bar" class="inline-block flex-2 md:hidden lg:hidden w-auto h-auto">
+            <img id="top_side_bar_button" src="./resources/main_side_bar.png"
+              class="block md:hidden lg:hidden max-w-30 max-h-15 object-contain p-3 hover:cursor-pointer">
+          </div>
+          <div id="options" class="flex flex-1.5 md:flex-1 lg:flex-1 items-center w-auto h-auto pr-5">
+
+            <!-- these images all seem set in stone, but thanks to evil rendering, they
+                 scale just fine -->
+            <img id="courses_button" src="./resources/options_courses_gray.png"
+              class="hidden md:inline-block lg:inline-block max-w-30 max-h-15 object-contain p-3 hover:cursor-pointer">
+            <img src="./resources/options_tiler.png"
+              class="hidden md:hidden lg:inline-block max-w-30 max-h-8 object-contain">
+            <img id="beer_button" src="./resources/options_beer_gray.png"
+              class="inline-block md:inline-block lg:inline-block max-w-30 max-h-15 object-contain p-3 hover:cursor-pointer">
+            <img id="notification_button" src="./resources/options_notification_gray.png"
+              class="inline-block md:inline-block lg:inline-block max-w-30 max-h-15 object-contain p-3 hover:cursor-pointer">
+            <img src="./resources/options_tiler.png"
+              class="hidden md:hidden lg:inline-block max-w-30 max-h-8 object-contain">
+
+            <!-- profile block that grows and shrinks according to the current device dimensions -->
+            <div id="profile"
+              class="flex justify-center items-center w-auto h-full pr-2 hover:cursor-pointer hover:text-sky-600">
+              <div id="profile_icon"
+                class="inline-block p-3 rounded-xl text-center text-white md:text-xl sm:text-lg  bg-pink-700"> <b>TU</b>
+              </div>
+              <span class="hidden md:hidden lg:inline p-2 md:text-lg sm:text-sm"> Thalia User </span>
+            </div>
+
+            <!-- for some reason, the options are put after the profile; such nice devs, right? -->
+            <img id="settings_button" src="./resources/options_settings_gray.png"
+              class="hidden md:inline-block lg:inline-block max-w-30 max-h-15 object-contain p-3 hover:cursor-pointer">
+          </div>
+        </div>
+      </div>
+
+      <div id="top_bar_border"
+        class="block w-full h-auto border-none md:border-1 md:border-gray-200 drop-shadow-none :drop-shadow-lg">
+        <div id="top_bar_bottom_center"
+          class="block w-full xl:w-300 2xl:w-300 h-auto mr-0 ml-0 lg:mr-0 lg:ml-0 xl:mr-auto xl:ml-auto 2xl:mr-auto 2xl:ml-auto mt-0 mb-0">
+          <div id="top_bar_bottom_container"
+            class="hidden md:flex md:justify-start lg:flex lg:justify-start w-full h-auto">
+            <div id="extras" class="w-full h-auto p-3 pl-5 md:text-xl sm:text-lg">
+              <a
+                href="https://ru.osiris-student.nl/onderwijscatalogus/extern/cursus?collegejaar=huidig&taal=en&cursuscode=NWI-IBC016">
+                <span class="hover:text-sky-600 hover:cursor-pointer"> Open Courses </span> </a>
+              <span id="protofolio_button" class="pl-3 hover:text-sky-600 hover:cursor-pointer"> Portfolio <b>⌄</b>
+              </span>
+              <span id="help_button" class="pl-3 hover:text-sky-600 hover:cursor-pointer"> Help <b>⌄</b> </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="content_container_center"
+      class="block w-full lg:w-full xl:w-300 h-auto mr-0 ml-0 lg:mr-0 lg:ml-0 xl:mr-auto xl:ml-auto 2xl:mr-auto 2xl:ml-auto mt-0 mb-0">
+      <div id="course_banner"
+        class="z-0 w-full h-50 overflow-hidden pr-0 pl-0 md:pr-0 md:pl-0 lg:pr-5 lg:pl-5 2xl:pl-5 2xl:pr-5">
+
+        <!-- the actual course cover that should change based on the selected course -->
+        <img id="course_img_banner" src="./resources/banner-wide-low-density-max-size.jpg"
+          class="z-0 block w-full h-full object-cover">
+
+        <!-- the course name to be displayed ontop the cover-->
+        <span class="z-1 relative left-5 bottom-20 hidden w-auto h-auto md:text-xl 2xl:text-5xl text-white course_name">
+          Speaker Bio: Cristiana Dell'Erba </span>
+      </div>
+
+      <div id="content_container"
+        class="z-0 block md:flex lg:flex md:gap-[5%] lg:gap-[5%] w-full h-auto bg-inherit p-5">
+
+        <!-- the content and links to other pages -->
+        <div id="content_side_bar_container" class="block md:iniline-block lg:iniline-block w-full md:w-2/3 lg:w-2/3">
+
+          <!-- actual content of the page -->
+          <div id="content_side_bar"
+            class="block w-full h-auto p-2 pb-10 bg-white border-2 border-white rounded-xl drop-shadow-none md:drop-shadow-sm lg:drop-shadow-sm">
+
+            <!-- course info container for dsiplaying the information about the selected course -->
+            <div id="course_info" class="w-full h-auto p-3 pt-5 text-2xl">
+
+              <!-- the title for the shown announcement including author -->
+              <div id="course_title" class="block w-full h-auto pb-2 text-3xl text-sky-600"> Bio: Cristiana Dell'Erba </div>
+              <div id="course_author" class="block w-full h-auto pb-5 text-sm text-gray-800"> Symposium Team posted on
+                Mar 24, 2025 13:49</div>
+
+              <!-- the actual text for the course -->
+              <div id="course_text" class="block w-full h-auto">
+                I am Cristiana Dell’Erba, a PhD candidate in the national Learning Sciences and Digital Technologies
+                program at the University of Verona in Italy. I graduated with a master’s degree in primary teaching and
+                worked in kindergarten and primary schools for three years.
+                <br>
+                Now, my curriculum, New Literacies and Digital Citizenship, aims to investigate the relationships
+                between technologies and social contexts in educational processes with a humanistic and
+                interdisciplinary focus on ethics, citizenship, and digital skills.
+                <br><br>
+                I am doing it by understanding how students use AI in their daily lives and then designing and
+                implementing specific activities to promote a critical use of it within the AI Competency Framework for
+                Students (UNESCO, 2024). The project is parallelly carried out in the Netherlands and Italy to draft
+                contextual guidelines and discover best practices.
+                Since November, I have joined ISiS, and the students of the Faculty of Science have filled in surveys
+                and participated in an interview. Today, Dutch preliminary results are ready to be taken out of the
+                oven.
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- right sidebar for displaying announcements and the calendar -->
+
+        <div id="info_side_bar"
+          class="block md:iniline-block lg:iniline-block mt-7 md:mt-0 lg:mt-0 w-full md:w-1/3 lg:w-1/3 h-auto">
+          <!-- current announcements in place -->
+          <div id="announcements"
+            class="block w-full h-auto p-5 bg-white border-2 border-white rounded-xl drop-shadow-none md:drop-shadow-sm lg:drop-shadow-sm">
+
+            <!-- title for the announcement block-->
+            <span class="block pb-5 text-base"> <b>General Event Info</b> </span>
+
+            <!-- actual announcement to be displayed -->
+            <div id="announcement" class="block p-7 border-1 border-gray-200 text-lg rounded-xl">
+              On the 16th of April at the Burghardt, we're hosting a day of talks on Computer-Assisted Education from
+              partners and professors,
+              with lunch provided and a borrel at the end of the talks. <br> You'll also get a chance to chat with
+              people from our partner companies during the lunch! <br>
+              Please arrive before 11:30, as you won't be able to enter the venue after that time. We look forward to
+              seeing you!
+            </div>
+          </div>
+
+          <!-- schedule for the symposium activities -->
+          <!------------------------------------------->
+          <!-- the atrocities commited here shall remain unbeknownst to
+                man kind and its relatives -->
+          <div id="schedule"
+            class="block w-full h-auto mt-7 p-5 bg-white border-2 border-white rounded-xl drop-shadow-none md:drop-shadow-sm lg:drop-shadow-sm">
+
+            <!-- title for the schedule block-->
+            <span class="block pb-5 text-base"> <b>Schedule</b> </span>
+
+            <!-- day marker -->
+            <div id="current_day" class="block p-4 border-1 border-gray-200 text-base rounded-xl"> <b>Wednesday, April
+                16, 2025</b> </div>
+
+            <!-- toggleable list of upcomming events -->
+            <div id="upcomming"
+              class="block mt-4 p-4 w-full h-auto bg-inherit border-1 border-gray-200 rounded-xl text-base">
+              <div id="upcomming_title" class="sticky top-0 flex flex-row p-3 pl-0 bg-inherit rounded-b-xl">
+                <span class="basis-24/25"> <b>Upcoming events</b> </span>
+                <img id="upcomming_button" src="./resources/options_list.png"
+                  class="basis-1/25 max-w-4 max-h-auto object-contain rotate-90 hover:cursor-pointer transition-[rotate] duration-200 ease-in-out"></img>
+              </div>
+
+              <!-- list of all upcomming events in a simple grid pattern -->
+              <div id="event_list" class="grid grid-cols-1 w-full grid-rows-[auto] border-t-1 border-gray-200">
+
+                <!-- this date should always stay the same, after all it should be just the symposium date -->
+                <div id="event_1" class="flex items-center w-full h-auto p-5 bg-inherit event">
+                  <div class="inline-block w-auto h-full p-2">
+                    <span class="block p-1 text-lg border-b-1 border-gray-200"> APR </span>
+                    <span class="flex justify-center p-1 text-lg"> <b>16</b> </span>
+                  </div>
+
+                  <!-- actual info about the event, simply change the time and name of the event -->
+                  <div class="inline-block w-auto h-full p-2 pt-3">
+                    <span class="block text-md"> <b>10:00 - 10:30</b> </span>
+                    <span class="block text-lg"> <b>Walk-In </b></span>
+                    <span class="block text-md"> 2425 Thalia Symposium (KW3 V) </span>
+                  </div>
+                </div>
+
+                <!-- this date should always stay the same, after all it should be just the symposium date -->
+                <div id="event_1" class="flex items-center w-full h-auto p-5 bg-inherit event">
+                  <div class="inline-block w-auto h-full p-2">
+                    <span class="block p-1 text-lg border-b-1 border-gray-200"> APR </span>
+                    <span class="flex justify-center p-1 text-lg"> <b>16</b> </span>
+                  </div>
+
+                  <!-- actual info about the event, simply change the time and name of the event -->
+                  <div class="inline-block w-auto h-full p-2 pt-3">
+                    <span class="block text-md"> <b>10:30 - 10:40</b> </span>
+                    <span class="block text-lg"> <b>Opening </b></span>
+                    <span class="block text-md"> 2425 Thalia Symposium (KW3 V) </span>
+                  </div>
+                </div>
+
+                <!-- this date should always stay the same, after all it should be just the symposium date -->
+                <div id="event_2" class="flex items-center w-full h-auto p-5 bg-inherit event">
+                  <div class="inline-block w-auto h-full p-2">
+                    <span class="block p-1 text-lg border-b-1 border-gray-200"> APR </span>
+                    <span class="flex justify-center p-1 text-lg"> <b>16</b> </span>
+                  </div>
+
+                  <!-- actual info about the event, simply change the time and name of the event -->
+                  <div class="inline-block w-auto h-full p-2 pt-3">
+                    <span class="block text-md"> <b>10:40 - 11:30</b> </span>
+                    <span class="block text-lg"> <b>Talk 1: AI in Education </b></span>
+                    <span class="block text-md"> 2425 Thalia Symposium (KW3 V) </span>
+                  </div>
+                </div>
+
+                <!-- this date should always stay the same, after all it should be just the symposium date -->
+                <div id="event_3" class="flex items-center w-full h-auto p-5 bg-inherit event">
+                  <div class="inline-block w-auto h-full p-2">
+                    <span class="block p-1 text-lg border-b-1 border-gray-200"> APR </span>
+                    <span class="flex justify-center p-1 text-lg"> <b>16</b> </span>
+                  </div>
+
+                  <!-- actual info about the event, simply change the time and name of the event -->
+                  <div class="inline-block w-auto h-full p-2 pt-3">
+                    <span class="block text-md"> <b>11:40 - 12:30</b> </span>
+                    <span class="block text-lg"> <b>Talk 2: TBA </b></span>
+                    <span class="block text-md"> 2425 Thalia Symposium (KW3 V) </span>
+                  </div>
+                </div>
+
+                <!-- this date should always stay the same, after all it should be just the symposium date -->
+                <div id="event_4" class="flex items-center w-full h-auto p-5 bg-inherit event">
+                  <div class="inline-block w-auto h-full p-2">
+                    <span class="block p-1 text-lg border-b-1 border-gray-200"> APR </span>
+                    <span class="flex justify-center p-1 text-lg"> <b>16</b> </span>
+                  </div>
+
+                  <!-- actual info about the event, simply change the time and name of the event -->
+                  <div class="inline-block w-auto h-full p-2 pt-3">
+                    <span class="block text-md"> <b>12:30 - 13:50</b> </span>
+                    <span class="block text-lg"> <b>Lunch + Market </b></span>
+                    <span class="block text-md"> 2425 Thalia Symposium (KW3 V) </span>
+                  </div>
+                </div>
+
+                <!-- this date should always stay the same, after all it should be just the symposium date -->
+                <div id="event_5" class="flex items-center w-full h-auto p-5 bg-inherit event">
+                  <div class="inline-block w-auto h-full p-2">
+                    <span class="block p-1 text-lg border-b-1 border-gray-200"> APR </span>
+                    <span class="flex justify-center p-1 text-lg"> <b>16</b> </span>
+                  </div>
+
+                  <!-- actual info about the event, simply change the time and name of the event -->
+                  <div class="inline-block w-auto h-full p-2 pt-3">
+                    <span class="block text-md"> <b>13:50 - 14:40</b> </span>
+                    <span class="block text-lg"> <b>Talk 3: TBA </b></span>
+                    <span class="block text-md"> 2425 Thalia Symposium (KW3 V) </span>
+                  </div>
+                </div>
+
+                <div id="event_7" class="flex items-center w-full h-auto p-5 bg-inherit event">
+                  <div class="inline-block w-auto h-full p-2">
+                    <span class="block p-1 text-lg border-b-1 border-gray-200"> APR </span>
+                    <span class="flex justify-center p-1 text-lg"> <b>16</b> </span>
+                  </div>
+
+                  <!-- actual info about the event, simply change the time and name of the event -->
+                  <div class="inline-block w-auto h-full p-2 pt-3">
+                    <span class="block text-md"> <b>14:50 - 15:20</b> </span>
+                    <span class="block text-lg"> <b>Coffee Break </b></span>
+                    <span class="block text-md"> 2425 Thalia Symposium (KW3 V) </span>
+                  </div>
+                </div>
+
+                <!-- this date should always stay the same, after all it should be just the symposium date -->
+                <div id="event_6" class="flex items-center w-full h-auto p-5 bg-inherit event">
+                  <div class="inline-block w-auto h-full p-2">
+                    <span class="block p-1 text-lg border-b-1 border-gray-200"> APR </span>
+                    <span class="flex justify-center p-1 text-lg"> <b>16</b> </span>
+                  </div>
+
+                  <!-- actual info about the event, simply change the time and name of the event -->
+                  <div class="inline-block w-auto h-full p-2 pt-3">
+                    <span class="block text-md"> <b>15:20 - 16:10</b> </span>
+                    <span class="block text-lg"> <b>Talk 4: TBA </b></span>
+                    <span class="block text-md"> 2425 Thalia Symposium (KW3 V) </span>
+                  </div>
+                </div>
+
+                <div id="event_8" class="flex items-center w-full h-auto p-5 bg-inherit event">
+                  <div class="inline-block w-auto h-full p-2">
+                    <span class="block p-1 text-lg border-b-1 border-gray-200"> APR </span>
+                    <span class="flex justify-center p-1 text-lg"> <b>16</b> </span>
+                  </div>
+
+                  <!-- actual info about the event, simply change the time and name of the event -->
+                  <div class="inline-block w-auto h-full p-2 pt-3">
+                    <span class="block text-md"> <b>16:20 - 17:10</b> </span>
+                    <span class="block text-lg"> <b>Talk 5: TBA </b></span>
+                    <span class="block text-md"> 2425 Thalia Symposium (KW3 V) </span>
+                  </div>
+                </div>
+
+                <div id="event_9" class="flex items-center w-full h-auto p-5 bg-inherit event">
+                  <div class="inline-block w-auto h-full p-2">
+                    <span class="block p-1 text-lg border-b-1 border-gray-200"> APR </span>
+                    <span class="flex justify-center p-1 text-lg"> <b>16</b> </span>
+                  </div>
+
+                  <!-- actual info about the event, simply change the time and name of the event -->
+                  <div class="inline-block w-auto h-full p-2 pt-3">
+                    <span class="block text-md"> <b>17:10 - 19:00</b> </span>
+                    <span class="block text-lg"> <b>Borrel </b></span>
+                    <span class="block text-md"> 2425 Thalia Symposium (KW3 V) </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./info.js"></script>
+</body>
+
+</html>
